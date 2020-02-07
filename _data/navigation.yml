@@ -2,11 +2,11 @@
 main:
   - title: "Data Structure"
     url: https://lyw3447.io/_posts/Data-Structure
-  # - title: "About"
+  - title: "Open Source"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
+  - title: "Java"
   #   url: /year-archive/
-  # - title: "Sample Collections"
+  #- title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
