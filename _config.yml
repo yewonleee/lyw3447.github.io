@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name             : "Yewon Lee"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/Profile.jpg"
   bio              : "I am an **amazing** person."
   location         : "Studying in the US"
   email            :
