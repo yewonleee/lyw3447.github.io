@@ -3,7 +3,7 @@ main:
   - title: "About"
     url: /about/
   - title: "Study"
-    url: /Study/
+    url: /categories/
   #- title: "Java"
   #   url: /year-archive/
   #- title: "Sample Collections"
