@@ -1,10 +1,10 @@
 # main links
 main:
-  - title: "Data Structure"
-    url: https://lyw3447.io/_posts/Data-Structure
-  - title: "Open Source"
+  - title: "Study"
+    url: /about/
+  #- title: "Open Source"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  - title: "Java"
+  #- title: "Java"
   #   url: /year-archive/
   #- title: "Sample Collections"
   #   url: /collection-archive/
