@@ -2,8 +2,8 @@
 main:
   - title: "About"
     url: /about/
-  #- title: "Open Source"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  - title: "Study"
+    url: /Study/
   #- title: "Java"
   #   url: /year-archive/
   #- title: "Sample Collections"
