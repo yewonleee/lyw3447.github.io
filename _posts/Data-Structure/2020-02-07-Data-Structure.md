@@ -1,7 +1,7 @@
 ---
 title: "My First Post"
 date: 2020-02-07 16:41:00 -0400
-categories: etc
+categories: "Data Structure"
 ---
 
 1. Sort
