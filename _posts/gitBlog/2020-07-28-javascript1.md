@@ -367,4 +367,187 @@ The `onmousedown`, `onmouseup`, and `onclick` events are all parts of a mouse-cl
 
 
 
-## 
+## EventListener
+
+- Add an event listener that fires when a user clicks a button:
+
+`document.getElementById("myBtn").addEventListener("click", displayDate);`
+
+
+```ruby
+<p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myBtn").addEventListener("click", displayDate);
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+```
+
+
+
+
+
+- syntax
+
+`element.addEventListener(event, function, useCapture);`
+
+The first parameter is the type of the event (like `click` or `mousedown` or any other HTML DOM Event.)
+
+The second parameter is the function we want to call when the event occurs.
+
+The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.
+
+
+
+
+
+- Add Many Event Handlers to the Same Element
+
+`addEventListener()` method allows you to add many events to the same element, without overwriting existing events.
+
+
+```ruby
+<p>This example uses the addEventListener() method to add two click events to the same button.</p>
+
+<button id="myBtn">Try it</button>
+
+<script>
+var x = document.getElementById("myBtn");
+x.addEventListener("click", myFunction);
+x.addEventListener("click", someOtherFunction);
+
+function myFunction() {
+  alert ("Hello World!");
+}
+
+function someOtherFunction() {
+  alert ("This function was also executed!");
+}
+</script>
+```
+
+
+
+
+- Add an Event Handler to the window Object
+
+```ruby
+window.addEventListener("resize", function(){
+  document.getElementById("demo").innerHTML = sometext;
+});
+```
+
+
+
+
+## Dom Navigation
+
+
+Node         type             Example
+
+ELEMENT_NODE	1	`<h1 class="heading">W3Schools</h1>`
+
+ATTRIBUTE_NODE	2	 `class = "heading" (deprecated)`
+
+TEXT_NODE	3	`W3Schools`
+
+COMMENT_NODE	8	`<!-- This is a comment -->`
+
+DOCUMENT_NODE	9	`The HTML document itself (the parent of <html>)`
+
+DOCUMENT_TYPE_NODE	10	`<!Doctype html>`
+
+
+
+
+
+## Collections
+
+The `getElementsByTagName()` method returns an `HTMLCollection` object.
+
+An `HTMLCollection` object is an array-like list (collection) of HTML elements.
+
+The following code selects all `<p>` elements in a document:
+
+
+```ruby
+<p>Hello World!</p>
+
+<p>Hello Norway!</p>
+
+<p id="demo"></p>
+
+<script>
+var myCollection = document.getElementsByTagName("p");
+document.getElementById("demo").innerHTML =
+"The innerHTML of the second paragraph is: " +
+myCollection[1].innerHTML;
+</script>
+```
+
+
+
+
+
+## Node list
+
+```ruby
+<p>Hello World!</p>
+
+<p>Hello Norway!</p>
+
+<p>Click the button to change the color of all p elements.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var myNodelist = document.querySelectorAll("p");
+  var i;
+  for (i = 0; i < myNodelist.length; i++) {
+    myNodelist[i].style.color = "red";
+  }
+}
+</script>
+```
+
+
+
+
+- The Difference Between an HTMLCollection and a NodeList
+
+An `HTMLCollection` is a collection of **HTML elements**.
+
+A` NodeList` is a collection of **document nodes**.
+
+A NodeList and an HTML collection is very much the same thing.
+
+Both an HTMLCollection object and a NodeList object is an array-like list (collection) of objects.
+
+Both have a length property defining the number of items in the list (collection).
+
+Both provide an index (0, 1, 2, 3, 4, ...) to access each item like an array.
+
+HTMLCollection items can be accessed by their name, id, or index number.
+
+NodeList items can only be accessed by their index number.
+
+Only the NodeList object can contain attribute nodes and text nodes.
+
+
+
+
+- (+ A node list is not an array!)
+
+A node list may look like an array, but it is not.
+
+You can loop through the node list and refer to its nodes like an array.
+
+However, you cannot use Array Methods, like valueOf(), push(), pop(), or join() on a node list.
