@@ -1,6 +1,6 @@
 ---
-title:  "JavaScript 정리1"
-excerpt: "2020웹서비스 개발 캠프 Day6"
+title:  "JavaScript 정리2"
+excerpt: "2020웹서비스 개발 캠프 Day7"
 toc: true
 toc_sticky: true
 
@@ -11,7 +11,7 @@ tags:
   - Blog
   - categories
   - JavaScript
-last_modified_at: 2020-07-27
+last_modified_at: 2020-07-28
 ---
 
 
