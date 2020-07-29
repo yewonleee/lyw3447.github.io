@@ -285,4 +285,117 @@ function myFunction(xml) {
 
 
 
-## 
+## PHP
+
+In the example above, when a user types a character in the input field, a function called  `showHint()` is executed.
+
+The function is triggered by the onkeyup event.
+
+Here is the HTML code:
+
+
+```ruby
+<html>
+<body>
+
+<p><b>Start typing a name in the input field below:</b></p>
+
+<p>Suggestions: <span id="txtHint"></span></p>
+
+<form>
+First name: <input type="text" onkeyup="showHint(this.value)">
+</form>
+
+<script>
+function showHint(str) {
+  if (str.length == 0) {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "gethint.php?q=" + str, true);
+    xmlhttp.send();
+  }
+}
+</script>
+
+</body>
+</html>
+```
+
+
+
+
+
+
+## ASP
+
+In the example above, when a user types a character in the input field, a function called `showHint()` is executed.
+
+The function is triggered by the onkeyup event.
+
+Here is the HTML code:
+
+
+```ruby
+<html>
+<head>
+<script>
+function showHint(str) {
+  if (str.length == 0) {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "gethint.asp?q=" + str, true);
+    xmlhttp.send();
+  }
+}
+</script>
+</head>
+<body>
+
+<p><b>Start typing a name in the input field below:</b></p>
+<form>
+First name: <input type="text" onkeyup="showHint(this.value)">
+</form>
+<p>Suggestions: <span id="txtHint"></span></p>
+</body>
+</html>
+```
+
+
+
+
+## Database
+
+When a user selects a customer in the dropdown list above, a function called `showCustomer()`is executed. The function is triggered by the `onchange` event:
+
+
+```ruby
+function showCustomer(str) {
+  var xhttp;
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "getcustomer.php?q="+str, true);
+  xhttp.send();
+}
+```
